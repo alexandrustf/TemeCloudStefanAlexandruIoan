@@ -1,0 +1,21 @@
+:host {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.top {
+    flex: 0.9;
+}
+
+.bottom {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 0 50px;
+}
+
+#tv {
+    width: 25%;
+}
