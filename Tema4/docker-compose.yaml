@@ -1,0 +1,18 @@
+version: "3.4"
+
+services:
+  server:
+    image: deliveryserver
+    build:
+      context: Delivery-Server
+      dockerfile: Dockerfile
+    ports:
+      - "8181:3000"
+
+  client:
+    image: deliveryclient
+    build:
+      context: Delivery-Client
+      dockerfile: Dockerfile
+    ports:
+      - "8182:80"

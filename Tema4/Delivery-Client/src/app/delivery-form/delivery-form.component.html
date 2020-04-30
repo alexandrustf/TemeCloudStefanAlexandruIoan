@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="person-details">
+        <div class="input-group mr15">
+            <label>First name</label>
+            <input [(ngModel)]="sender.firstName" type="text" placeholder="Type in the sender first name">
+        </div>
+
+        <div class="input-group ">
+            <label>Last name</label>
+            <input [(ngModel)]="sender.lastName" type="text" placeholder="Type in the sender last name">
+        </div>
+
+        <div class="input-group ml15">
+            <label>Phone number</label>
+            <input [(ngModel)]="sender.phoneNumber" type="text" placeholder="Type in the sender phone number">
+        </div>
+    </div>
+
+    <div class="address-details">
+        <div class="input-group">
+            <label>Pickup address</label>
+            <input [(ngModel)]="sender.address" (keypress)="pickupAddressChannel.next($event.target.value)" type="text" placeholder="Type in the the adress where we should pickup the package from">
+        </div>
+    </div>
+
+    <div class="person-details">
+        <div class="input-group mr15">
+            <label>Receiver first name</label>
+            <input [(ngModel)]="receiver.firstName" type="text" placeholder="Type in the sender first name">
+        </div>
+
+        <div class="input-group">
+            <label>Receiver last name</label>
+            <input [(ngModel)]="receiver.lastName" type="text" placeholder="Type in the sender last name">
+        </div>
+
+        <div class="input-group ml15">
+            <label>Receiver phone number</label>
+            <input [(ngModel)]="receiver.address" type="text" placeholder="Type in the sender phone number">
+        </div>
+    </div>
+
+    <div class="address-details">
+        <div class="input-group">
+            <label>Delivery address</label>
+            <input (keypress)="deliveryAddressChannel.next($event.target.value)" type="text" placeholder="Type in the the adress where we should deliver the package">
+        </div>
+    </div>
+
+    <div id="map" ></div>
+
+
+    <footer>
+      <button (click)="confirm()"> CONFIRM </button>
+    </footer>
+</div>
